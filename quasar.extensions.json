@@ -1,0 +1,13 @@
+{
+  "route-generator": {
+    "pagesDir": "src/pages",
+    "routePrefix": "",
+    "layoutsDir": "src/layouts",
+    "ignorePattern": "/(^|[/\\])../",
+    "outDir": "src/router/route-generator",
+    "pagesImportPrefix": "pages/",
+    "generatorConfig": {
+      "nested": true
+    }
+  }
+}

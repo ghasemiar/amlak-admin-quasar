@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'shabnam-fd';
+  src: url('../assets/fonts/Shabnam-FD.eot');
+  src: url('../assets/fonts/Shabnam-FD.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/Shabnam-FD.woff2') format('woff2'),
+  url('../assets/fonts/Shabnam-FD.woff') format('woff'),
+  url('../assets/fonts/Shabnam-FD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'shabnam-fd', sans-serif;
+}
+
+html,
+body {
+  background-color: #f7f7f7;
+}

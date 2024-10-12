@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  amlak-admin-quasar:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: amlak-admin-quasar
+    ports:
+      - "6106:6106"
+    networks:
+      - nginx_proxy_manager
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/dist
+    command: ["http-server-spa", "dist/spa", "index.html", "6106"]
+    restart: unless-stopped
+networks:
+  nginx_proxy_manager:
+    name: npm_network
+    external: true

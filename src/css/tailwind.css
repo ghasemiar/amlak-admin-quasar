@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .form-loading {
+    @apply tw-animate-pulse;
+  }
+  .t-center {
+    @apply tw-flex tw-items-center tw-justify-center;
+  }
+  .t-row {
+    @apply tw-flex tw-items-center;
+  }
+  .t-custom-cell-container {
+    @apply t-row tw-justify-center;
+  }
+  .q-table__grid-item-value .t-custom-cell-container {
+    @apply tw-max-w-max;
+  }
+}

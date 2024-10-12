@@ -1,0 +1,220 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  prefix: 'tw-',
+  theme: {
+    screens: {
+      '2xs': '335px',
+      // => @media (min-width: 350px) { ... }
+
+      xs: '475px',
+      // => @media (min-width: 475px) { ... }
+
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
+    extend: {
+      spacing: {
+        128: '32rem',
+        144: '36rem',
+        'block-bw': '32px',
+        'block-in': '16px',
+      },
+    },
+
+    colors: {
+      primary: {
+        0: '#000000',
+        5: '#001212',
+        10: '#002525',
+        15: '#003737',
+        20: '#004949',
+        25: '#005B5B',
+        30: '#006D6D',
+        35: '#007F7F',
+        40: '#009191',
+        45: '#00A3A3',
+        50: '#00B5B5',
+        55: '#00C7C7',
+        DEFAULT: '#008080', // Updated primary color
+        65: '#00EBEB',
+        70: '#00FFFF',
+        75: '#2AFFFF',
+        80: '#54FFFF',
+        85: '#7EFFFF',
+        90: '#A8FFFF',
+        95: '#D2FFFF',
+        99: '#EFFFFF',
+        100: '#FFFFFF',
+      },
+      secondary: {
+        0: '#000000',
+        5: '#081212',
+        10: '#102525',
+        15: '#184949',
+        20: '#206D6D',
+        25: '#289191',
+        30: '#30B5B5',
+        35: '#38D9D9',
+        40: '#40FFFF',
+        45: '#57FFFF',
+        50: '#6FFFFF',
+        55: '#87FFFF',
+        DEFAULT: '#9EFFFF', // Updated secondary color
+        65: '#AFFFFF',
+        70: '#C7FFFF',
+        75: '#DFFFFF',
+        80: '#F7FFFF',
+        85: '#FFFFFB',
+        90: '#FFFFF7',
+        95: '#FFFFF3',
+        99: '#FFFFFF',
+        100: '#FFFFFF',
+      },
+      accent: {
+        0: '#000000',
+        5: '#260700',
+        10: '#4D0E00',
+        15: '#732500',
+        20: '#9A3B00',
+        25: '#C15200',
+        30: '#E86900',
+        35: '#F37E0A',
+        40: '#FF930D',
+        45: '#FFA617',
+        50: '#FFB922',
+        55: '#FFCB2D',
+        DEFAULT: '#FFD63B', // Updated accent color
+        65: '#FFDE4A',
+        70: '#FFE659',
+        75: '#FFEE69',
+        80: '#FFF579',
+        85: '#FFFC89',
+        90: '#FFFF99',
+        95: '#FFFFA9',
+        99: '#FFFFC0',
+        100: '#FFFFFF',
+      },
+      surface: {
+        light: {
+          DEFAULT: '#ffffff',
+          1: '#E3F1F2',
+          2: '#DCEFF0',
+          3: '#D5ECEE',
+          4: '#D2EBEE',
+          5: '#CDE9EC',
+          6: '#f0f0f1',
+          text: {
+            DEFAULT: '#264653', // Darker text color for light surface
+            1: '#1F393E', // Darker variant for contrast
+            2: '#172C30',
+            3: '#102024',
+            4: '#081418',
+            5: '#040A0C',
+          },
+        },
+        dark: {
+          DEFAULT: '#272B2B',
+          1: '#1a2627',
+          2: '#192B2C',
+          3: '#182f31',
+          4: '#183033',
+          5: '#173336',
+          text: {
+            DEFAULT: '#CBF3F0', // Lighter text color for dark surface
+            1: '#D6F7F5', // Lighter variant for contrast
+            2: '#E0FAFA',
+            3: '#EAFDFC',
+            4: '#F4FFFF',
+            5: '#FFFFFF',
+          },
+        },
+      },
+      warning: {
+        0: '#000000',
+        5: '#261000',
+        10: '#4C2200',
+        15: '#733400',
+        20: '#9A4600',
+        25: '#C15800',
+        30: '#E86A00',
+        35: '#F37E0A',
+        40: '#FF930D',
+        45: '#FFAA17',
+        50: '#FFB922',
+        55: '#FFCB2D',
+        DEFAULT: '#FFD63B', // Updated warning color
+        65: '#FFDE4A',
+        70: '#FFE659',
+        75: '#FFEE69',
+        80: '#FFF579',
+        85: '#FFFC89',
+        90: '#FFFF99',
+        95: '#FFFFA9',
+        99: '#FFFFC0',
+        100: '#FFFFFF',
+      },
+      success: {
+        0: '#000000',
+        5: '#001414',
+        10: '#002828',
+        15: '#004C4C',
+        20: '#007070',
+        25: '#009494',
+        30: '#00B8B8',
+        35: '#00D9D9',
+        40: '#00FFFF',
+        45: '#2AFFFF',
+        50: '#54FFFF',
+        55: '#7EFFFF',
+        DEFAULT: '#A8FFFF', // Updated success color
+        65: '#D2FFFF',
+        70: '#EFFFFF',
+        75: '#EFFFFF',
+        80: '#FFFFFF',
+        85: '#FFFFFF',
+        90: '#FFFFFF',
+        95: '#FFFFFF',
+        99: '#FFFFFF',
+        100: '#FFFFFF',
+      },
+      error: {
+        0: '#000000',
+        5: '#260403',
+        10: '#4C0807',
+        15: '#72100A',
+        20: '#98180E',
+        25: '#BD2011',
+        30: '#E32814',
+        35: '#FF4A3A',
+        40: '#FF5C4D',
+        45: '#FF6E60',
+        50: '#FF8073',
+        55: '#FF9286',
+        DEFAULT: '#FFA6A2', // Updated error color
+        65: '#FFB8B5',
+        70: '#FFCAC8',
+        75: '#FFDCDC',
+        80: '#FFE8E8',
+        85: '#FFF4F4',
+        90: '#FFF8F8',
+        95: '#FFFCFC',
+        99: '#FFFFFF',
+        100: '#FFFFFF',
+      },
+    },
+  },
+  plugins: [],
+};
